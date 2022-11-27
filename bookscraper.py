@@ -16,7 +16,9 @@ searchBox = Entry(root, width=45)
 searchBox.grid(row=4, column=0)
 
 # Image stuff, replace of image of book cover later on! TODO
-image = ImageTk.PhotoImage(Image.open("bookscraperGUI/books.png"))
+booksImage = ImageTk.PhotoImage(Image.open("bookscraperGUI/books.png"))
+imageLabel = Label(root, image=booksImage)
+imageLabel.grid(row=6, column=0)
 
 #TODO work on search function
 def search():
