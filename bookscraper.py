@@ -2,7 +2,6 @@ from tkinter import *
 from bs4 import BeautifulSoup
 import requests
 import webbrowser
-from tkhtmlview import HTMLLabel
 
 root = Tk()
 
@@ -23,7 +22,9 @@ searchMsgLabel.grid(row=5, column=0)
 searchBox = Entry(frame, width=45)
 searchBox.grid(row=4, column=0)
 
-#TODO work on search function
+def callback(url):
+    webbrowser.open_new(url)
+
 def search():
     searchMsg = "Searching for " + searchBox.get() +"..."
     searchMsgLabel.config(text=searchMsg)
@@ -41,6 +42,8 @@ def search():
         herewego = str(counter) + ". " + link_href
         result = Label(frame, text=herewego)
         result.grid(row=5 + counter, column=0)
+        result.bind("<Button-1>", lambda e: callback(link_href))
+        print(herewego)
         counter += 1
 
     # print(links["href"])
