@@ -43,7 +43,6 @@ def search():
         result = Label(frame, text=herewego)
         result.grid(row=5 + counter, column=0)
         result.bind("<Button-1>", lambda e: callback(link_href))
-        print(herewego)
         counter += 1
 
     # print(links["href"])
