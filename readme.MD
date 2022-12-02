@@ -1,3 +1,4 @@
+# bookscraperGUI
 **Project Details**
 
 Scrapes download links for PDFs, EPUBs, and other book formats using beautiful soup 4 
